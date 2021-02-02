@@ -12,7 +12,6 @@ export const Meal = () => (
         if (localStorage.getItem("meal_user")) {
             return (
             <>
-                <ApplicationViews />
             </>
             );
         } else {
