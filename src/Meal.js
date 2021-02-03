@@ -11,9 +11,9 @@ export const Meal = () => (
         render={() => {
         if (localStorage.getItem("meal_user")) {
             return (
-            <>
-            <MealForm />
-            </>
+            
+            <ApplicationViews />
+            
             );
         } else {
             return <Redirect to="/login" />;

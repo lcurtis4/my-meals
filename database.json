@@ -9,5 +9,17 @@
       "name": "Logan Curtis",
       "id": 2
     }
+  ],
+
+  "meals": [
+    {
+       "id": 1,
+       "name": "swag",
+       "mainDish": "poo", 
+       "sideDish": "weiners",
+       "bev": "dick water"
+    }
   ]
+
+
 }
