@@ -6,7 +6,7 @@ export const MealProvider = (props) => {
     const [meals, setMeals] = useState([]) 
 
     const getMeals = () => {
-        return fetch("http://localhost:8088/meals") 
+        return fetch("http://localhost:8088/meals?_expand=mealType") 
         .then(res => res.json())
         .then(setMeals) 
     }

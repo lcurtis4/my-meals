@@ -2,14 +2,16 @@ import { useContext, useEffect, useState } from "react"
 import { MealContext } from "./MealProvider"
 import {useHistory, useParams } from 'react-router-dom'
 
+
 export const MealForm = () => {
     const { addMeal } = useContext(MealContext)
     
     const [meal, setMeal] = useState({
         name: "",
+        mealTypeId: 0,
         mainDish: "",
         sideDish: "",
-        bev: "",
+        bev: ""
     })
     
     //const [isLoading, setIsLoading] = useState(true);
@@ -20,18 +22,20 @@ export const MealForm = () => {
     const handleControlledInputChange = (event) => {
         const newMeal = { ...meal }
 
-        newMeal[event.target.name] = event.target.value 
+        newMeal[event.target.id] = event.target.value 
 
         setMeal(newMeal)
+        console.log(meal)
     }
 
     const handleSaveNewMeal = () => {
         addMeal({
             name: meal.name,
+            mealTypeId: parseInt(meal.mealTypeId),
             mainDish: meal.mainDish,
             sideDish: meal.sideDish,
             bev: meal.bev
-        }).then(() => history.push(`/meals`))
+        }).then(() => history.push("/meals"))
         }
 
 
@@ -41,12 +45,24 @@ export const MealForm = () => {
         <h2 className="mealForm_title">New Meal</h2>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="mealName">Meal Name:</label>
-                <input type="text" id="mealName" name="name" required autoFocus className="form-control"
+                <label htmlFor="name">Meal Name:</label>
+                <input type="text" id="name" name="name" required autoFocus className="form-control"
                 placeholder="Meal Name"
                 onChange={handleControlledInputChange}
                 defaultValue={meal.name}/>
             </div>
+        </fieldset>
+
+        <fieldset>
+          <div className="form-group">
+            <label htmlFor="mealTypeId">What meal is this?: </label>
+            <select value={meal.mealTypeId} name="mealTypeId" id="mealTypeId" className="form-control" 
+            onChange={handleControlledInputChange}>
+              <option value="1">Breakfast</option>
+              <option value="2">Lunch</option>
+              <option value="3">Dinner</option>
+            </select>
+          </div>
         </fieldset>
 
         <fieldset>
