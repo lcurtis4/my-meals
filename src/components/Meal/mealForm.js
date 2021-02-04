@@ -1,4 +1,6 @@
-import { useContext, useEffect } from "react"
+import { useContext, useEffect, useState } from "react"
+import { MealContext } from "../Meal/MealProvider"
+import {useHistory, useParams } from 'react-router-dom'
 
 export const MealForm = () => {
     const { addMeal } = useContext(MealContext)
@@ -23,9 +25,9 @@ export const MealForm = () => {
         setMeal(newMeal)
     }
 
-    const handleSaveNewMeal = (event) => {
-        event.preventDefault() 
-    } 
+    const handleSaveNewMeal = () => {
+        addMeal().then(() => history.push(`/meals`))
+    }
 
 
     

@@ -2,24 +2,22 @@
   "users": [
     {
       "id": 1,
+      "name": "Logan Curtis",
       "email": "lcurtis0104@gmail.com"
     },
     {
-      "email": "lcurtis004@gmail.com",
-      "name": "Logan Curtis",
+      "email": "tylerbcurtis40@gmail.com",
+      "name": "tyler curtris",
       "id": 2
     }
   ],
-
   "meals": [
     {
-       "id": 1,
-       "name": "swag",
-       "mainDish": "poo", 
-       "sideDish": "weiners",
-       "bev": "dick water"
+      "id": 1,
+      "name": "swag",
+      "mainDish": "poo",
+      "sideDish": "weiners",
+      "bev": "pp water"
     }
   ]
-
-
 }
