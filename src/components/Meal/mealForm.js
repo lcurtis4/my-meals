@@ -12,7 +12,7 @@ export const MealForm = () => {
         Beverage: "",
     })
     
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading] = useState(true);
 
     const {mealId} = useParams();
     const history = useHistory();
@@ -87,18 +87,11 @@ export const MealForm = () => {
 
 /* TODO: 
 Create form elements for dish name
-    Create form elements for main dish
-    Create form elements for side dish
-    Create form elements for beverage
-    Create form elements for side dish
-
     create dropdown to select meal type
         options:
             breakfast 
             lunch 
             dinner
-
-    create save button
 
     make them all save to the database 
 

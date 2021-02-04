@@ -6,16 +6,15 @@ import { MealCard} from "./MealCard"
 export const MealList = () => {
     const { meals, getMeals } = useContext(MealContext)
 
+    const history = useHistory()
     useEffect(() => {
         console.log("MealList: useEffect - getMeals") 
         getMeals()
     }, [])
-
-const history = useHistory()
-
-console.log(meals)
-return ( 
-    <>
+    
+    
+    return ( 
+        <>
         <h2>Meals</h2>
     <div className="meals">
     {
