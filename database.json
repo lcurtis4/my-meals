@@ -13,18 +13,34 @@
   ],
   "meals": [
     {
-      "name": "Classic",
-      "mainDish": "Pancakes",
-      "sideDish": "Bacon",
-      "bev": "OJ",
-      "id": 1
+      "name": "resres",
+      "mealTypeId": 3,
+      "mainDish": "rasrw",
+      "sideDish": "resresres",
+      "bev": "resresr",
+      "id": 7
     },
     {
-      "name": "Classic",
-      "mainDish": "Pancakes",
-      "sideDish": "Bacon",
-      "bev": "OJ",
-      "id": 2
+      "name": "resres",
+      "mealTypeId": 3,
+      "mainDish": "rasrw",
+      "sideDish": "resresres",
+      "bev": "resresr",
+      "id": 8
+    }
+  ],
+  "mealTypes": [
+    {
+      "id": 1, 
+      "name": "Breakfast"
+    },
+    {
+      "id": 2, 
+      "name": "Lunch"
+    },
+    {
+      "id": 3, 
+      "name": "Dinner"
     }
   ]
 }

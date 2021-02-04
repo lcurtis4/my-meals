@@ -2,6 +2,7 @@ import { Route } from "react-router-dom"
 import { MealProvider } from "./components/Meal/MealProvider"
 import { MealList } from "./components/Meal/MealList"
 import { MealForm } from "./components/Meal/MealForm"
+import { NavBar } from "./components/nav/NavBar"
 
 export const ApplicationViews = () => {
     return (
