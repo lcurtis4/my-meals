@@ -7,12 +7,12 @@ export const MealForm = () => {
     
     const [meal, setMeal] = useState({
         name: "",
-        MainDish: "",
-        SideDish: "",
-        Beverage: "",
+        mainDish: "",
+        sideDish: "",
+        bev: "",
     })
     
-    const [isLoading] = useState(true);
+    //const [isLoading, setIsLoading] = useState(true);
 
     const {mealId} = useParams();
     const history = useHistory();
@@ -26,8 +26,13 @@ export const MealForm = () => {
     }
 
     const handleSaveNewMeal = () => {
-        addMeal().then(() => history.push(`/meals`))
-    }
+        addMeal({
+            name: meal.name,
+            mainDish: meal.mainDish,
+            sideDish: meal.sideDish,
+            bev: meal.bev
+        }).then(() => history.push(`/meals`))
+        }
 
 
     
@@ -47,7 +52,7 @@ export const MealForm = () => {
         <fieldset>
             <div className="form-group">
                 <label htmlFor="mainDish">Main Dish: </label>
-                <input type="text" id="mainDish" name="main" required autoFocus className="form-control"
+                <input type="text" id="mainDish" name="mainDish" required autoFocus className="form-control"
                 placeholder="Main Dish" 
                 onChange={handleControlledInputChange}
                 defaultValue={meal.mainDish}/>
@@ -57,7 +62,7 @@ export const MealForm = () => {
         <fieldset>
             <div className="form-group">
                 <label htmlFor="sideDish">Side Dish: </label>
-                <input type="text" id="sideDish" name="side" required autoFocus className="form-control"
+                <input type="text" id="sideDish" name="sideDish" required autoFocus className="form-control"
                 placeholder="Side Dish" 
                 onChange={handleControlledInputChange}
                 defaultValue={meal.sideDish}/>
@@ -74,7 +79,7 @@ export const MealForm = () => {
             </div>
         </fieldset>
         <button className="btn btn-primary"
-        disable={isLoading}
+        //disable={isLoading}
         onClick={event => {
             event.preventDefault()
             handleSaveNewMeal()
@@ -84,6 +89,8 @@ export const MealForm = () => {
     </form>
 )
 }
+    
+
 
 /* TODO: 
 Create form elements for dish name
