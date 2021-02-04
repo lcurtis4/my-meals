@@ -1,5 +1,19 @@
+import { Route } from "react-router-dom"
+import { MealProvider } from "./components/Meal/MealProvider"
+import { MealList } from "./components/Meal/MealList"
+import { MealForm } from "./components/Meal/MealForm"
+
 export const ApplicationViews = () => {
     return (
-console.log("test")
+        <> 
+        <MealProvider> 
+            <Route exact path="/meals">
+                <MealList /> 
+                <MealForm /> 
+            </Route>
+        
+        
+        </MealProvider>
+        </>
     )
 }
