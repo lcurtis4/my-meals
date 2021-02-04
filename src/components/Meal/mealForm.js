@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react"
-import { MealContext } from "../Meal/MealProvider"
+import { MealContext } from "./MealProvider"
 import {useHistory, useParams } from 'react-router-dom'
 
 export const MealForm = () => {
