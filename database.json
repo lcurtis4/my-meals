@@ -13,18 +13,18 @@
   ],
   "meals": [
     {
-      "id": 1,
-      "name": "swag",
-      "mainDish": "poo",
-      "sideDish": "weiners",
-      "bev": "pp water"
-    }
+      "name": "Classic",
+      "mainDish": "Pancakes",
+      "sideDish": "Bacon",
+      "bev": "OJ",
+      "id": 1
+    },
     {
-      "name": "ewtew",
-      "mainDish": "trtetret",
-      "sideDish": "retretre",
-      "bev": "tretretre",
-      "id": 5
+      "name": "Classic",
+      "mainDish": "Pancakes",
+      "sideDish": "Bacon",
+      "bev": "OJ",
+      "id": 2
     }
   ]
 }
