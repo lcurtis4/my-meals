@@ -9,8 +9,10 @@ export const ApplicationViews = () => {
         <> 
         <MealProvider> 
             <Route exact path="/meals">
+               <article className= "mealCss">
                 <MealList /> 
                 <MealForm /> 
+               </article>
             </Route>
         
         

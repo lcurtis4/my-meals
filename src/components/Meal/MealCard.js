@@ -1,5 +1,7 @@
 import React from "react"
 
+
+//HTML Representation of a meal. This is being called on "/meals" 
 export const MealCard = ({ meal }) => (
     <section className="meal">
             <div className="mainDish">Name: {meal.name}</div>

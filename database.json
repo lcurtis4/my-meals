@@ -12,30 +12,7 @@
     }
   ],
   "meals": [
-    {
-      "name": "resres",
-      "mealTypeId": 3,
-      "mainDish": "rasrw",
-      "sideDish": "resresres",
-      "bev": "resresr",
-      "id": 7
-    },
-    {
-      "name": "resres",
-      "mealTypeId": 3,
-      "mainDish": "rasrw",
-      "sideDish": "resresres",
-      "bev": "resresr",
-      "id": 8
-    },
-    {
-      "name": "Test",
-      "mealTypeId": 2,
-      "mainDish": "test",
-      "sideDish": "test",
-      "bev": "test",
-      "id": 9
-    }
+    
   ],
   "mealTypes": [
     {

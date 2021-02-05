@@ -1,0 +1,11 @@
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.navbar_item {
+    flex-basis: 200%;
+    list-style-type: none;
+    border-radius: thick;
+}

@@ -1,0 +1,34 @@
+.meals { 
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid goldenrod;
+}
+
+.meal { 
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid goldenrod;
+    display: inline-block;
+}
+
+
+.mealForm {
+    width: 600px;
+    background: #ffffff;
+    height: 650px;
+    margin-right: 800px;
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1.5em;
+    border: 1px solid goldenrod;
+    margin-left: 250px;
+}
+
+
+
+.mealCss {
+    display: flex;
+}
+
