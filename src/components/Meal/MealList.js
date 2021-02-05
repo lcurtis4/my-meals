@@ -8,7 +8,7 @@ export const MealList = () => {
 
     const history = useHistory()
     useEffect(() => {
-        console.log("MealList: useEffect - getMeals") 
+       // console.log("MealList: useEffect - getMeals") 
         getMeals()
     }, [])
     

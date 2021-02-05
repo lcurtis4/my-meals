@@ -13,33 +13,49 @@
   ],
   "meals": [
     {
-      "name": "resres",
-      "mealTypeId": 3,
-      "mainDish": "rasrw",
-      "sideDish": "resresres",
-      "bev": "resresr",
-      "id": 7
+      "name": "Classic",
+      "mealTypeId": 1,
+      "mainDish": "Pancakes",
+      "sideDish": "Bacon",
+      "bev": "OJ",
+      "id": 9
     },
     {
-      "name": "resres",
-      "mealTypeId": 3,
-      "mainDish": "rasrw",
-      "sideDish": "resresres",
-      "bev": "resresr",
-      "id": 8
+      "name": "Classic",
+      "mealTypeId": 2,
+      "mainDish": "Pan",
+      "sideDish": "B",
+      "bev": "O",
+      "id": 10
+    },
+    {
+      "name": "test",
+      "mealTypeId": null,
+      "mainDish": "taco",
+      "sideDish": "salsa",
+      "bev": "margs",
+      "id": 11
+    },
+    {
+      "name": "test",
+      "mealTypeId": null,
+      "mainDish": "taco",
+      "sideDish": "salsa",
+      "bev": "margs",
+      "id": 12
     }
   ],
   "mealTypes": [
     {
-      "id": 1, 
+      "id": 1,
       "name": "Breakfast"
     },
     {
-      "id": 2, 
+      "id": 2,
       "name": "Lunch"
     },
     {
-      "id": 3, 
+      "id": 3,
       "name": "Dinner"
     }
   ]

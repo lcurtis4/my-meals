@@ -25,7 +25,6 @@ export const MealForm = () => {
         newMeal[event.target.id] = event.target.value 
 
         setMeal(newMeal)
-        console.log(meal)
     }
 
     const handleSaveNewMeal = () => {
