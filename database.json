@@ -27,19 +27,27 @@
       "sideDish": "resresres",
       "bev": "resresr",
       "id": 8
+    },
+    {
+      "name": "Test",
+      "mealTypeId": 2,
+      "mainDish": "test",
+      "sideDish": "test",
+      "bev": "test",
+      "id": 9
     }
   ],
   "mealTypes": [
     {
-      "id": 1, 
+      "id": 1,
       "name": "Breakfast"
     },
     {
-      "id": 2, 
+      "id": 2,
       "name": "Lunch"
     },
     {
-      "id": 3, 
+      "id": 3,
       "name": "Dinner"
     }
   ]
