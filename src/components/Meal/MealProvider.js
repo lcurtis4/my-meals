@@ -22,11 +22,18 @@ export const MealProvider = (props) => {
         })
         .then(getMeals)
     }
-
+    
+    const dltMeal = mealId => {
+        return fetch(`http://localhost:8088/meals/${mealId}`, {
+        method: "DELETE"
+    })
+            .then(getMeals)
+}
 
     return (
         <MealContext.Provider value={{
-            meals, getMeals, addMeal 
+            meals, getMeals, addMeal, dltMeal
+            
         }}>
             {props.children}
         </MealContext.Provider>

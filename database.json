@@ -12,7 +12,30 @@
     }
   ],
   "meals": [
-    
+    {
+      "name": "Classic",
+      "mealTypeId": 1,
+      "mainDish": "Pancakes",
+      "sideDish": "Bacon",
+      "bev": "Orange Juice ",
+      "id": 1
+    },
+    {
+      "name": "Meat Loaf",
+      "mealTypeId": 3,
+      "mainDish": "Meat Loaf",
+      "sideDish": "Mashed Potato's ",
+      "bev": "Milk",
+      "id": 2
+    },
+    {
+      "name": "Sandwich",
+      "mealTypeId": 2,
+      "mainDish": "Turkey Sandwich",
+      "sideDish": "Doritos",
+      "bev": "Sunkist",
+      "id": 3
+    }
   ],
   "mealTypes": [
     {
