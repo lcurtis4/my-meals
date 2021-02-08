@@ -1,0 +1,21 @@
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.navbar_item1 {
+    flex-basis: 200%;
+    list-style-type: none;
+    border-radius: thick;
+    margin-right: 75px;
+    margin-left: 250px;
+}
+
+.navbar_item2 {
+    flex-basis: 200%;
+    list-style-type: none;
+    border-radius: thick;
+
+}
+

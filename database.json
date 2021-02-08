@@ -17,32 +17,40 @@
       "mealTypeId": 1,
       "mainDish": "Pancakes",
       "sideDish": "Bacon",
-      "bev": "OJ",
-      "id": 9
+      "bev": "Orange Juice ",
+      "id": 1
     },
     {
-      "name": "Classic",
+      "name": "Sandwich",
       "mealTypeId": 2,
-      "mainDish": "Pan",
-      "sideDish": "B",
-      "bev": "O",
-      "id": 10
+      "mainDish": "Turkey Sandwich",
+      "sideDish": "Doritos",
+      "bev": "Sunkist",
+      "id": 3
     },
     {
-      "name": "test",
-      "mealTypeId": null,
-      "mainDish": "taco",
-      "sideDish": "salsa",
-      "bev": "margs",
-      "id": 11
+      "name": "Ramen",
+      "mealTypeId": 3,
+      "mainDish": "Ramen, Chicken, Veggies",
+      "sideDish": "Egg Roll",
+      "bev": "Sunkist",
+      "id": 4
     },
     {
-      "name": "test",
-      "mealTypeId": null,
-      "mainDish": "taco",
-      "sideDish": "salsa",
-      "bev": "margs",
-      "id": 12
+      "name": "Ribs",
+      "mealTypeId": 3,
+      "mainDish": "Ribs",
+      "sideDish": "Deviled eggs,  corn bread, potatoes ",
+      "bev": "Milk",
+      "id": 5
+    },
+    {
+      "name": "Cereal",
+      "mealTypeId": 1,
+      "mainDish": "Captain Crunch",
+      "sideDish": "none",
+      "bev": "Milk ",
+      "id": 6
     }
   ],
   "mealTypes": [

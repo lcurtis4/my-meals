@@ -1,121 +1,145 @@
-import { useContext, useEffect, useState } from "react"
-import { MealContext } from "./MealProvider"
-import {useHistory, useParams } from 'react-router-dom'
-
+import { useContext, useState } from "react";
+import { MealContext } from "./MealProvider";
+import { useHistory, useParams } from "react-router-dom";
+import "./Meal.css"
 
 export const MealForm = () => {
-    const { addMeal } = useContext(MealContext)
-    
+    const { addMeal } = useContext(MealContext);
+
+    //setting up what the database is looking for from the save function
     const [meal, setMeal] = useState({
         name: "",
         mealTypeId: 0,
         mainDish: "",
         sideDish: "",
-        bev: ""
-    })
-    
-    //const [isLoading, setIsLoading] = useState(true);
+        bev: "",
+    });
 
-    const {mealId} = useParams();
+    //The useParams hook will return an object of key/value pairs from your application URL that is set to be dynamic. 
+    const { mealId } = useParams();
     const history = useHistory();
 
+    // This function is actively updating the state of meal 
     const handleControlledInputChange = (event) => {
-        const newMeal = { ...meal }
+        const newMeal = { ...meal };
 
-        newMeal[event.target.id] = event.target.value 
+        newMeal[event.target.id] = event.target.value;
 
         setMeal(newMeal)
     }
 
+    /* This function shows what is being saved from the form and how it is accessed in the database. 
+    It uses ".then" to ".push" the data to the json database */
     const handleSaveNewMeal = () => {
         addMeal({
-            name: meal.name,
-            mealTypeId: parseInt(meal.mealTypeId),
-            mainDish: meal.mainDish,
-            sideDish: meal.sideDish,
-            bev: meal.bev
-        }).then(() => history.push("/meals"))
-        }
+        name: meal.name,
+        mealTypeId: parseInt(meal.mealTypeId),
+        mainDish: meal.mainDish,
+        sideDish: meal.sideDish,
+        bev: meal.bev,
+        }).then(() => history.push("/meals"));
+    };
 
-
-    
-    return (
-        <form className="mealForm">
+  //This return statement populates the dom with the "Meal Form" for adding a meal to the local database and displaying it
+return (
+    <form className="mealForm">
         <h2 className="mealForm_title">New Meal</h2>
         <fieldset>
             <div className="form-group">
-                <label htmlFor="name">Meal Name:</label>
-                <input type="text" id="name" name="name" required autoFocus className="form-control"
+            <label htmlFor="name">Meal Name:</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                autoFocus
+                className="form-control"
                 placeholder="Meal Name"
                 onChange={handleControlledInputChange}
-                defaultValue={meal.name}/>
+                defaultValue={meal.name}
+                />
+        </div>
+        </fieldset>
+
+        <fieldset>
+            <div className="form-group">
+            <label htmlFor="mealTypeId">What meal is this?: </label>
+            <select
+                value={meal.mealTypeId}
+                name="mealTypeId"
+                id="mealTypeId"
+                className="form-control"
+                placeholder="What Meal is this?"
+                onChange={handleControlledInputChange}
+                >
+                <option value="0">Please Select a Meal</option>
+                <option value="1">Breakfast</option>
+                <option value="2">Lunch</option>
+                <option value="3">Dinner</option>
+            </select>
             </div>
         </fieldset>
 
         <fieldset>
-          <div className="form-group">
-            <label htmlFor="mealTypeId">What meal is this?: </label>
-            <select value={meal.mealTypeId} name="mealTypeId" id="mealTypeId" className="form-control" 
-            onChange={handleControlledInputChange}>
-              <option value="1">Breakfast</option>
-              <option value="2">Lunch</option>
-              <option value="3">Dinner</option>
-            </select>
-          </div>
-        </fieldset>
-
-        <fieldset>
             <div className="form-group">
-                <label htmlFor="mainDish">Main Dish: </label>
-                <input type="text" id="mainDish" name="mainDish" required autoFocus className="form-control"
-                placeholder="Main Dish" 
+            <label htmlFor="mainDish">Main Dish: </label>
+            <input
+                type="text"
+                id="mainDish"
+                name="mainDish"
+                required
+                autoFocus
+                className="form-control"
+                placeholder="Main Dish"
                 onChange={handleControlledInputChange}
-                defaultValue={meal.mainDish}/>
+                defaultValue={meal.mainDish}
+                />
             </div>
         </fieldset>
 
         <fieldset>
             <div className="form-group">
                 <label htmlFor="sideDish">Side Dish: </label>
-                <input type="text" id="sideDish" name="sideDish" required autoFocus className="form-control"
-                placeholder="Side Dish" 
-                onChange={handleControlledInputChange}
-                defaultValue={meal.sideDish}/>
+                <input
+                    type="text"
+                    id="sideDish"
+                    name="sideDish"
+                    required
+                    autoFocus
+                    className="form-control"
+                    placeholder="Side Dish"
+                    onChange={handleControlledInputChange}
+                    defaultValue={meal.sideDish}
+                    />
             </div>
         </fieldset>
 
         <fieldset>
             <div className="form-group">
-                <label htmlFor="bev">Beverage: </label>
-                <input type="text" id="bev" name="bev" required autoFocus className="form-control"
-                placeholder="Beverage" 
+            <label htmlFor="bev">Beverage: </label>
+            <input
+                type="text"
+                id="bev"
+                name="bev"
+                required
+                autoFocus
+                className="form-control"
+                placeholder="Beverage"
                 onChange={handleControlledInputChange}
-                defaultValue={meal.bev}/>
+                defaultValue={meal.bev}
+                />
             </div>
         </fieldset>
-        <button className="btn btn-primary"
-        //disable={isLoading}
-        onClick={event => {
-            event.preventDefault()
-            handleSaveNewMeal()
-        }}>
-        {mealId ? <> Save Meal</> : <> Add Meal</>}</button>
-
+        <button
+            className="btn btn-primary"
+            //disable={isLoading}
+            onClick={(event) => {
+                event.preventDefault();
+                handleSaveNewMeal();
+            }}
+            >
+            {mealId ? <> Save Meal</> : <> Save Meal</>}
+        </button>
     </form>
-)
-}
-    
-
-
-/* TODO: 
-Create form elements for dish name
-    create dropdown to select meal type
-        options:
-            breakfast 
-            lunch 
-            dinner
-
-    make them all save to the database 
-
-    boom you're done kid!
-     */
+    );
+};
