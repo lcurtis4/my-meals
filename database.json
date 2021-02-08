@@ -51,6 +51,14 @@
       "sideDish": "none",
       "bev": "Milk ",
       "id": 6
+    },
+    {
+      "name": "Taco's",
+      "mealTypeId": 3,
+      "mainDish": "Chicken Taco's ",
+      "sideDish": "Lettuce, Tomatos, Rice",
+      "bev": "Margs",
+      "id": 7
     }
   ],
   "mealTypes": [

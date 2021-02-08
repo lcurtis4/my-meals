@@ -8,8 +8,6 @@ import "./Meal.css";
 export const MealList = () => {
   const { meals, getMeals, dltMeal } = useContext(MealContext);
   const history = useHistory();
-
-    const history = useHistory()
     useEffect(() => {
        // console.log("MealList: useEffect - getMeals") 
         getMeals()
