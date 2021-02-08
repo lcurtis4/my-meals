@@ -1,11 +1,11 @@
 import { useEffect, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { MealContext, dltMeal } from "./MealProvider";
-import { MealCard } from "./MealCard";
-import "./Meal.css";
+import { MealContext, dltMeal } from "../Meal/MealProvider";
+import { MealCard } from "../Meal/MealCard";
+import "../Meal/Meal.css";
 
 // MealList is responsible for displaying the saved meals on the dom.
-export const MealList = () => {
+export const SpecialList = () => {
   const { meals, getMeals, dltMeal } = useContext(MealContext);
   const history = useHistory();
 
@@ -23,9 +23,9 @@ export const MealList = () => {
     <>
       <div className="mealList">
         <div className="meals">
-          <h2> Saved Meals</h2>
+          <h2> Today's Specials</h2>
           {meals.map((meal) => {
-            return <MealCard key={meal.id} meal={meal} />;
+            // return <MealCard key={meal.id} meal={meal} />;
           })}
         </div>
       </div>

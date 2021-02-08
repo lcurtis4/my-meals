@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { MealContext } from "./MealProvider";
 import { useHistory, useParams } from "react-router-dom";
 import "./Meal.css"
@@ -19,7 +19,7 @@ export const MealForm = () => {
     const { mealId } = useParams();
     const history = useHistory();
 
-    // This function is activly updating the state of meal 
+    // This function is actively updating the state of meal 
     const handleControlledInputChange = (event) => {
         const newMeal = { ...meal };
 
@@ -41,7 +41,7 @@ export const MealForm = () => {
         }).then(() => history.push("/meals"));
     };
 
-  //This return statment populates the dom with the "Meal Form" for adding a meal to the local database and displaying it
+  //This return statement populates the dom with the "Meal Form" for adding a meal to the local database and displaying it
 return (
     <form className="mealForm">
         <h2 className="mealForm_title">New Meal</h2>

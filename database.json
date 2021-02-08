@@ -21,20 +21,20 @@
       "id": 1
     },
     {
-      "name": "Meat Loaf",
-      "mealTypeId": 3,
-      "mainDish": "Meat Loaf",
-      "sideDish": "Mashed Potato's ",
-      "bev": "Milk",
-      "id": 2
-    },
-    {
       "name": "Sandwich",
       "mealTypeId": 2,
       "mainDish": "Turkey Sandwich",
       "sideDish": "Doritos",
       "bev": "Sunkist",
       "id": 3
+    },
+    {
+      "name": "Ramen",
+      "mealTypeId": 3,
+      "mainDish": "Ramen, Chicken, Veggies",
+      "sideDish": "Egg Roll",
+      "bev": "Sunkist",
+      "id": 4
     }
   ],
   "mealTypes": [
