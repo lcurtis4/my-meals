@@ -73,7 +73,7 @@ return (
                 placeholder="What Meal is this?"
                 onChange={handleControlledInputChange}
                 >
-                <option value="">Please Select a Meal</option>
+                <option value="0">Please Select a Meal</option>
                 <option value="1">Breakfast</option>
                 <option value="2">Lunch</option>
                 <option value="3">Dinner</option>

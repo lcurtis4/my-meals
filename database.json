@@ -35,6 +35,22 @@
       "sideDish": "Egg Roll",
       "bev": "Sunkist",
       "id": 4
+    },
+    {
+      "name": "Ribs",
+      "mealTypeId": 3,
+      "mainDish": "Ribs",
+      "sideDish": "Deviled eggs,  corn bread, potatoes ",
+      "bev": "Milk",
+      "id": 5
+    },
+    {
+      "name": "Cereal",
+      "mealTypeId": 1,
+      "mainDish": "Captain Crunch",
+      "sideDish": "none",
+      "bev": "Milk ",
+      "id": 6
     }
   ],
   "mealTypes": [

@@ -1,6 +1,6 @@
 import { useEffect, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import { MealContext, dltMeal } from "../Meal/MealProvider";
+import { MealContext } from "../Meal/MealProvider";
 import { MealCard } from "../Meal/MealCard";
 import "../Meal/Meal.css";
 
@@ -25,7 +25,7 @@ export const SpecialList = () => {
         <div className="meals">
           <h2> Today's Specials</h2>
           {meals.map((meal) => {
-            // return <MealCard key={meal.id} meal={meal} />;
+            return <MealCard key={meal.id} meal={meal} />;
           })}
         </div>
       </div>
