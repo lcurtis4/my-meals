@@ -13,33 +13,41 @@
   ],
   "meals": [
     {
-      "name": "resres",
-      "mealTypeId": 3,
-      "mainDish": "rasrw",
-      "sideDish": "resresres",
-      "bev": "resresr",
-      "id": 7
+      "name": "Classic",
+      "mealTypeId": 1,
+      "mainDish": "Pancakes",
+      "sideDish": "Bacon",
+      "bev": "Orange Juice ",
+      "id": 1
     },
     {
-      "name": "resres",
+      "name": "Sandwich",
+      "mealTypeId": 2,
+      "mainDish": "Turkey Sandwich",
+      "sideDish": "Doritos",
+      "bev": "Sunkist",
+      "id": 3
+    },
+    {
+      "name": "Ramen",
       "mealTypeId": 3,
-      "mainDish": "rasrw",
-      "sideDish": "resresres",
-      "bev": "resresr",
-      "id": 8
+      "mainDish": "Ramen, Chicken, Veggies",
+      "sideDish": "Egg Roll",
+      "bev": "Sunkist",
+      "id": 4
     }
   ],
   "mealTypes": [
     {
-      "id": 1, 
+      "id": 1,
       "name": "Breakfast"
     },
     {
-      "id": 2, 
+      "id": 2,
       "name": "Lunch"
     },
     {
-      "id": 3, 
+      "id": 3,
       "name": "Dinner"
     }
   ]
