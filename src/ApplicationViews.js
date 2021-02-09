@@ -17,7 +17,7 @@ export const ApplicationViews = () => {
             </Route>
             <Route exact path="/specials">
                 <SpecialDrpdwn /> 
-                {/* <SpecialList />   */}
+                <SpecialList />  
             </Route>
         
         

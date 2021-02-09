@@ -28,10 +28,20 @@ export const MealProvider = (props) => {
         method: "DELETE"
     })
         .then(getMeals)
-}
+    }
+
+    const addSpecial = specialObj => {
+        return fetch("http://localhost:8088/specials", {
+            method: "POST", 
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(specialObj)
+        })
+    }
 return (
     <MealContext.Provider value={{
-        meals, getMeals, addMeal, dltMeal
+        meals, getMeals, addMeal, dltMeal, addSpecial
         
     }}>
             {props.children}

@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { useHistory } from "react-router-dom"
-import {dltMeal, MealContext} from "./MealProvider"
+import {MealContext} from "./MealProvider"
 
 
 //HTML Representation of a meal. This is being called on "/meals" 
@@ -16,9 +16,6 @@ export const MealCard = ({ meal }) => {
     }
     
     return (
-        
-
-
     <section className="meal">
             <div className="mainDish">Name: {meal.name}</div>
             <div className="mealType">Type: {meal.mealTypeId.name}</div>

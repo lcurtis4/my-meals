@@ -1,16 +1,31 @@
 import { useState, useContext, useEffect } from "react";
+import { useHistory, useParams } from "react-router-dom";
 import { MealContext } from "../Meal/MealProvider";
 
 export const SpecialDrpdwn = () => {
     const [breakfastChoices, setBreakfastChoices] = useState([]);
     const [lunchChoices, setLunchChoices] = useState([]);
     const [dinnerChoices, setDinnerChoices] = useState([]);
+    
+    const { meals, getMeals, addSpecial } = useContext(MealContext);
 
-    const { meals, getMeals } = useContext(MealContext);
+    const history = useHistory();
+    const {specialId} = useParams()
+
+    const [meal, setMeal] = useState({
+        breakfastId: "",
+        lunchId: "",
+        dinnerId: ""
+    });
+
 
     useEffect(() => {
         getMeals()
     }, []);
+
+    useEffect(() => {
+        console.log(meal);
+    }, [meal]);
     
     useEffect(() => {
         /* loop over meals, add the meal to the corresponding array. */ 
@@ -33,12 +48,20 @@ export const SpecialDrpdwn = () => {
     },[meals])
 
     const handleControlledInputChange = (event) => {
-        // const newMeal = { ...meal };
+       // Making a copy of the meal obj and saving that copy under newMeal
+        const newMeal = { ...meal };
 
-        // newMeal[event.target.id] = event.target.value;
+        newMeal[event.target.id] = parseInt(event.target.value);
 
-        // setMeal(newMeal);
-        // console.log(meal);
+        setMeal(newMeal);
+    };
+
+    const handleSaveSpecial = () => {
+        addSpecial({
+        breakfastId: breakfastId,
+        lunchId: "",
+        dinnerId: ""
+        }).then(() => history.push("/specials"));
     };
 
 
@@ -46,18 +69,18 @@ export const SpecialDrpdwn = () => {
     <form className="specialDropdown">
         <fieldset>
         <div className="form-group">
-        <label htmlFor="breakfast">Breakfast: </label>
+        <label htmlFor="breakfastId">Breakfast: </label>
         <select
             // value={meal.breakfast}
-            name="breakfast"
-            id="breakfast"
+            name="breakfastId"
+            id="breakfastId"
             className="form-control"
             placeholder="What Meal is this?"
             onChange={handleControlledInputChange}
             >
             <option value="">Please Select a Breakfast</option>
             {breakfastChoices.map((meal) => {
-                return <option value="{meal.id}"> 
+                return <option value={meal.id}> 
                     {meal.name}
                 </option> 
             })}
@@ -67,18 +90,18 @@ export const SpecialDrpdwn = () => {
 
         <fieldset>
         <div className="form-group">
-        <label htmlFor="lunch">Lunch: </label>
+        <label htmlFor="lunchId">Lunch: </label>
         <select
             // value={meal.breakfast}
-            name="lunch"
-            id="lunch"
+            name="lunchId"
+            id="lunchId"
             className="form-control"
             placeholder="What Meal is this?"
             onChange={handleControlledInputChange}
             >
             <option value="">Please Select a Lunch</option>
             {lunchChoices.map((meal) => {
-                return <option value="{meal.id}"> 
+                return <option value={meal.id}> 
                     {meal.name}
                 </option> 
             })}
@@ -88,24 +111,32 @@ export const SpecialDrpdwn = () => {
 
         <fieldset>
         <div className="form-group">
-        <label htmlFor="dinner">Dinner: </label>
+        <label htmlFor="dinnerId">Dinner: </label>
         <select
             // value={meal.breakfast}
-            name="dinner"
-            id="dinner"
+            name="dinnerId"
+            id="dinnerId"
             className="form-control"
             placeholder="What Meal is this?"
             onChange={handleControlledInputChange}
             >
             <option value="">Please Select a Dinner</option>
             {dinnerChoices.map((meal) => {
-                return <option value="{meal.id}"> 
+                return <option value={meal.id}> 
                     {meal.name}
                 </option> 
                 })}
         </select>
         </div>
     </fieldset>
+    <button 
+    className="btn btn-secondary" 
+    onClick={(event) => {
+        event.preventDefault();
+        handleSaveSpecial();
+    }}>
+    {specialId ? <> Save Specials</> : <> Save Specials</>}
+    </button>
     </form> 
     )
 }

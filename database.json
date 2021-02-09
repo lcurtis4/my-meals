@@ -59,6 +59,14 @@
       "sideDish": "Lettuce, Tomatos, Rice",
       "bev": "Margs",
       "id": 7
+    },
+    {
+      "name": "Tilapia ",
+      "mealTypeId": 3,
+      "mainDish": "Lemmon Pepper Tilapia ",
+      "sideDish": "Yellow Rice & Deviled eggs",
+      "bev": "Milk",
+      "id": 8
     }
   ],
   "mealTypes": [
@@ -73,6 +81,20 @@
     {
       "id": 3,
       "name": "Dinner"
+    }
+  ],
+  "specials": [
+    {
+      "breakfastId": "",
+      "lunchId": "",
+      "dinnerId": "",
+      "id": 1
+    },
+    {
+      "breakfastId": "",
+      "lunchId": "",
+      "dinnerId": "",
+      "id": 2
     }
   ]
 }
