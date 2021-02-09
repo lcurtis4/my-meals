@@ -95,6 +95,18 @@
       "lunchId": "",
       "dinnerId": "",
       "id": 2
+    },
+    {
+      "breakfastId": 6,
+      "lunchId": "",
+      "dinnerId": "",
+      "id": 3
+    },
+    {
+      "breakfastId": 1,
+      "lunchId": 3,
+      "dinnerId": 5,
+      "id": 4
     }
   ]
 }

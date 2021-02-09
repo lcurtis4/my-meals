@@ -12,7 +12,7 @@ export const SpecialDrpdwn = () => {
     const history = useHistory();
     const {specialId} = useParams()
 
-    const [meal, setMeal] = useState({
+    const [specials, setSpecials] = useState({
         breakfastId: "",
         lunchId: "",
         dinnerId: ""
@@ -24,8 +24,8 @@ export const SpecialDrpdwn = () => {
     }, []);
 
     useEffect(() => {
-        console.log(meal);
-    }, [meal]);
+        console.log(specials);
+    }, [specials]);
     
     useEffect(() => {
         /* loop over meals, add the meal to the corresponding array. */ 
@@ -49,18 +49,18 @@ export const SpecialDrpdwn = () => {
 
     const handleControlledInputChange = (event) => {
        // Making a copy of the meal obj and saving that copy under newMeal
-        const newMeal = { ...meal };
+        const newMeal = { ...specials };
 
         newMeal[event.target.id] = parseInt(event.target.value);
 
-        setMeal(newMeal);
+        setSpecials(newMeal);
     };
 
     const handleSaveSpecial = () => {
         addSpecial({
-        breakfastId: breakfastId,
-        lunchId: "",
-        dinnerId: ""
+        breakfastId: specials.breakfastId,
+        lunchId: specials.lunchId,
+        dinnerId: specials.dinnerId
         }).then(() => history.push("/specials"));
     };
 
