@@ -63,7 +63,7 @@
     {
       "name": "Tilapia ",
       "mealTypeId": 3,
-      "mainDish": "Lemmon Pepper Tilapia ",
+      "mainDish": "Lemon Pepper Tilapia ",
       "sideDish": "Yellow Rice & Deviled eggs",
       "bev": "Milk",
       "id": 8
@@ -93,28 +93,16 @@
   ],
   "specials": [
     {
-      "breakfastId": 6,
-      "lunchId": "",
-      "dinnerId": "",
-      "id": 3
-    },
-    {
       "breakfastId": 1,
-      "lunchId": 3,
-      "dinnerId": 5,
-      "id": 4
+      "lunchId": 9,
+      "dinnerId": 7,
+      "id": 1
     },
     {
       "breakfastId": 6,
       "lunchId": 3,
-      "dinnerId": 4,
-      "id": 5
-    },
-    {
-      "breakfastId": 6,
-      "lunchId": "",
-      "dinnerId": "",
-      "id": 6
+      "dinnerId": 8,
+      "id": 2
     }
   ]
 }
