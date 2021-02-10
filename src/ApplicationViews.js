@@ -1,27 +1,25 @@
-import { Route } from "react-router-dom"
-import { MealProvider } from "./components/Meal/MealProvider"
-import { MealList } from "./components/Meal/MealList"
-import { SpecialList } from "./components/Specials/SpecialList"
-import { MealForm } from "./components/Meal/mealForm"
-import { SpecialDrpdwn } from "./components/Specials/SpecialDropDown"
+import { Route } from "react-router-dom";
+import { MealProvider } from "./components/Meal/MealProvider";
+import { MealList } from "./components/Meal/MealList";
+import { SpecialList } from "./components/Specials/SpecialList";
+import { MealForm } from "./components/Meal/mealForm";
+import { SpecialDropdown } from "./components/Specials/SpecialDropDown";
 
 export const ApplicationViews = () => {
     return (
-        <> 
-        <MealProvider> 
+        <>
+        <MealProvider>
             <Route exact path="/meals">
-            <article className= "mealCss">
-                <MealList /> 
-                <MealForm /> 
-               </article>
+            <article className="mealCss">
+                <MealList />
+                <MealForm />
+            </article>
             </Route>
             <Route exact path="/specials">
-                <SpecialDrpdwn /> 
-                <SpecialList />  
+            <SpecialDropdown />
+            <SpecialList />
             </Route>
-        
-        
         </MealProvider>
         </>
-    )
-}
+    );
+};

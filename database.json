@@ -67,6 +67,14 @@
       "sideDish": "Yellow Rice & Deviled eggs",
       "bev": "Milk",
       "id": 8
+    },
+    {
+      "name": "Chicken Sandwich",
+      "mealTypeId": 2,
+      "mainDish": "Chicken Sandwich",
+      "sideDish": "Cheez-Itz, Fruit Snacks, Granola Bar",
+      "bev": "Water",
+      "id": 9
     }
   ],
   "mealTypes": [
@@ -85,18 +93,6 @@
   ],
   "specials": [
     {
-      "breakfastId": "",
-      "lunchId": "",
-      "dinnerId": "",
-      "id": 1
-    },
-    {
-      "breakfastId": "",
-      "lunchId": "",
-      "dinnerId": "",
-      "id": 2
-    },
-    {
       "breakfastId": 6,
       "lunchId": "",
       "dinnerId": "",
@@ -107,6 +103,18 @@
       "lunchId": 3,
       "dinnerId": 5,
       "id": 4
+    },
+    {
+      "breakfastId": 6,
+      "lunchId": 3,
+      "dinnerId": 4,
+      "id": 5
+    },
+    {
+      "breakfastId": 6,
+      "lunchId": "",
+      "dinnerId": "",
+      "id": 6
     }
   ]
 }

@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { MealContext } from "./MealProvider";
 import { useHistory, useParams } from "react-router-dom";
-import "./Meal.css"
+import "./Meal.css";
 
 export const MealForm = () => {
     const { addMeal } = useContext(MealContext);
@@ -15,21 +15,21 @@ export const MealForm = () => {
         bev: "",
     });
 
-    //The useParams hook will return an object of key/value pairs from your application URL that is set to be dynamic. 
+    //The useParams hook will return an object of key/value pairs from your application URL that is set to be dynamic.
     const { mealId } = useParams();
     const history = useHistory();
 
-    // This function is actively updating the state of meal 
+    // This function is actively updating the state of meal
     const handleControlledInputChange = (event) => {
         const newMeal = { ...meal };
 
         newMeal[event.target.id] = event.target.value;
 
-        setMeal(newMeal)
-    }
+        setMeal(newMeal);
+    };
 
     /* This function shows what is being saved from the form and how it is accessed in the database. 
-    It uses ".then" to ".push" the data to the json database */
+        It uses ".then" to ".push" the data to the json database */
     const handleSaveNewMeal = () => {
         addMeal({
         name: meal.name,
@@ -40,9 +40,9 @@ export const MealForm = () => {
         }).then(() => history.push("/meals"));
     };
 
-  //This return statement populates the dom with the "Meal Form" for adding a meal to the local database and displaying it
-return (
-    <form className="mealForm">
+    //This return statement populates the dom with the "Meal Form" for adding a meal to the local database and displaying it
+    return (
+        <form className="mealForm">
         <h2 className="mealForm_title">New Meal</h2>
         <fieldset>
             <div className="form-group">
@@ -57,8 +57,8 @@ return (
                 placeholder="Meal Name"
                 onChange={handleControlledInputChange}
                 defaultValue={meal.name}
-                />
-        </div>
+            />
+            </div>
         </fieldset>
 
         <fieldset>
@@ -71,7 +71,7 @@ return (
                 className="form-control"
                 placeholder="What Meal is this?"
                 onChange={handleControlledInputChange}
-                >
+            >
                 <option value="0">Please Select a Meal</option>
                 <option value="1">Breakfast</option>
                 <option value="2">Lunch</option>
@@ -93,24 +93,24 @@ return (
                 placeholder="Main Dish"
                 onChange={handleControlledInputChange}
                 defaultValue={meal.mainDish}
-                />
+            />
             </div>
         </fieldset>
 
         <fieldset>
             <div className="form-group">
-                <label htmlFor="sideDish">Side Dish: </label>
-                <input
-                    type="text"
-                    id="sideDish"
-                    name="sideDish"
-                    required
-                    autoFocus
-                    className="form-control"
-                    placeholder="Side Dish"
-                    onChange={handleControlledInputChange}
-                    defaultValue={meal.sideDish}
-                    />
+            <label htmlFor="sideDish">Side Dish: </label>
+            <input
+                type="text"
+                id="sideDish"
+                name="sideDish"
+                required
+                autoFocus
+                className="form-control"
+                placeholder="Side Dish"
+                onChange={handleControlledInputChange}
+                defaultValue={meal.sideDish}
+            />
             </div>
         </fieldset>
 
@@ -127,19 +127,19 @@ return (
                 placeholder="Beverage"
                 onChange={handleControlledInputChange}
                 defaultValue={meal.bev}
-                />
+            />
             </div>
         </fieldset>
         <button
             className="btn btn-primary"
             //disable={isLoading}
             onClick={(event) => {
-                event.preventDefault();
-                handleSaveNewMeal();
+            event.preventDefault();
+            handleSaveNewMeal();
             }}
-            >
+        >
             {mealId ? <> Save Meal</> : <> Save Meal</>}
         </button>
-    </form>
+        </form>
     );
 };
