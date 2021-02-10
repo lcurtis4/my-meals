@@ -21,9 +21,15 @@ export const SpecialProvider = (props) => {
         })
     }
 
+    const [selectedSpecials, setSelectedSpecials] = useState({
+        breakfastId: "",
+        lunchId: "",
+        dinnerId: "",
+    });
+
 return (
     <SpecialContext.Provider value={{
-        specials, getSpecials, addSpecial 
+        specials, getSpecials, addSpecial, setSelectedSpecials, selectedSpecials
     }}>
         {props.children}
     </SpecialContext.Provider>

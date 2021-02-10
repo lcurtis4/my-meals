@@ -92,17 +92,5 @@
     }
   ],
   "specials": [
-    {
-      "breakfastId": 1,
-      "lunchId": 9,
-      "dinnerId": 7,
-      "id": 1
-    },
-    {
-      "breakfastId": 6,
-      "lunchId": 3,
-      "dinnerId": 8,
-      "id": 2
-    }
   ]
 }

@@ -1,6 +1,7 @@
 import { useState, useContext, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import { MealContext } from "../Meal/MealProvider";
+import { SpecialContext} from "./SpecialProvider"
 
 export const SpecialDropdown = () => {
     const [breakfastChoices, setBreakfastChoices] = useState([]);
@@ -8,6 +9,7 @@ export const SpecialDropdown = () => {
     const [dinnerChoices, setDinnerChoices] = useState([]);
 
     const { meals, getMeals, addSpecial } = useContext(MealContext);
+    const { setSelectedSpecials, selectedSpecials } = useContext(SpecialContext)
 
     const history = useHistory();
     const { specialId } = useParams();
@@ -45,14 +47,35 @@ export const SpecialDropdown = () => {
         setDinnerChoices(dinner);
     }, [meals]);
 
-    const handleControlledInputChange = (event) => {
+    const handleBreakfastInputChange = (event) => {
         // Making a copy of the meal obj and saving that copy under newMeal
-        const newMeal = { ...specials };
+        const newMeal = { ...selectedSpecials };
 
-        newMeal[event.target.id] = parseInt(event.target.value);
+        newMeal.breakfastId = parseInt(event.target.value);
 
-        setSpecials(newMeal);
+        setSelectedSpecials(newMeal);
+        console.log("test" )
     };
+    const handleLunchInputChange = (event) => {
+        // Making a copy of the meal obj and saving that copy under newMeal
+        const newMeal = { ...selectedSpecials };
+
+        newMeal.lunchId = parseInt(event.target.value);
+
+        setSelectedSpecials(newMeal);
+        console.log("test" )
+    };
+    const handleDinnerInputChange = (event) => {
+        // Making a copy of the meal obj and saving that copy under newMeal
+        const newMeal = { ...selectedSpecials };
+
+        newMeal.dinnerId = parseInt(event.target.value);
+
+        setSelectedSpecials(newMeal);
+        console.log("test" )
+    };
+
+
 
     const handleSaveSpecial = () => {
         addSpecial({
@@ -73,7 +96,7 @@ export const SpecialDropdown = () => {
                 id="breakfastId"
                 className="form-control"
                 placeholder="What Meal is this?"
-                onChange={handleControlledInputChange}
+                onChange={handleBreakfastInputChange}
             >
                 <option value="">Please Select a Breakfast</option>
                 {breakfastChoices.map((meal) => {
@@ -92,7 +115,7 @@ export const SpecialDropdown = () => {
                 id="lunchId"
                 className="form-control"
                 placeholder="What Meal is this?"
-                onChange={handleControlledInputChange}
+                onChange={handleLunchInputChange}
             >
                 <option value="">Please Select a Lunch</option>
                 {lunchChoices.map((meal) => {
@@ -111,7 +134,7 @@ export const SpecialDropdown = () => {
                 id="dinnerId"
                 className="form-control"
                 placeholder="What Meal is this?"
-                onChange={handleControlledInputChange}
+                onChange={handleDinnerInputChange}
             >
                 <option value="">Please Select a Dinner</option>
                 {dinnerChoices.map((meal) => {
