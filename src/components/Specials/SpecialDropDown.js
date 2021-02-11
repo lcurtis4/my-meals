@@ -8,8 +8,8 @@ export const SpecialDropdown = () => {
     const [lunchChoices, setLunchChoices] = useState([]);
     const [dinnerChoices, setDinnerChoices] = useState([]);
 
-    const { meals, getMeals, addSpecial } = useContext(MealContext);
-    const { setSelectedSpecials, selectedSpecials } = useContext(SpecialContext)
+    const { meals, getMeals } = useContext(MealContext);
+    const { setSelectedSpecials, selectedSpecials, addSpecial, setSpecials } = useContext(SpecialContext)
 
     const history = useHistory();
     const { specialId } = useParams();
@@ -51,6 +51,7 @@ export const SpecialDropdown = () => {
         const newMeal = { ...selectedSpecials };
 
         newMeal.breakfastId = parseInt(event.target.value);
+        console.log(event.target.value)
 
         setSelectedSpecials(newMeal);
     };
@@ -71,15 +72,17 @@ export const SpecialDropdown = () => {
         setSelectedSpecials(newMeal);
     };
 
-
-
     const handleSaveSpecial = () => {
         addSpecial({
-        breakfastId: specials.breakfastId,
-        lunchId: specials.lunchId,
-        dinnerId: specials.dinnerId,
+        breakfastId: selectedSpecials.breakfastId,
+        lunchId: selectedSpecials.lunchId,
+        dinnerId: selectedSpecials.dinnerId,
         id: 1
-        }).then(() => history.push(`/specials/edit/${specials.id}`));
+        })//.then(() => history.push(`/specials/edit/${specials.id}`));
+        console.log(selectedSpecials.breakfastId)
+        console.log(selectedSpecials.lunchId)
+        console.log(selectedSpecials.dinnerId)
+
     };
 
     return (
@@ -97,7 +100,7 @@ export const SpecialDropdown = () => {
             >
                 <option value="">Please Select a Breakfast</option>
                 {breakfastChoices.map((meal) => {
-                return <option value={meal.id}>{meal.name}</option>;
+                return <option value={meal.id} key={meal.id}>{meal.name} </option>;
                 })}
             </select>
             </div>
@@ -116,7 +119,7 @@ export const SpecialDropdown = () => {
             >
                 <option value="">Please Select a Lunch</option>
                 {lunchChoices.map((meal) => {
-                return <option value={meal.id}>{meal.name}</option>;
+                return <option value={meal.id} key={meal.id}>{meal.name}</option>;
                 })}
             </select>
             </div>
@@ -135,7 +138,7 @@ export const SpecialDropdown = () => {
             >
                 <option value="">Please Select a Dinner</option>
                 {dinnerChoices.map((meal) => {
-                return <option value={meal.id}>{meal.name}</option>;
+                return <option value={meal.id} key={meal.id}>{meal.name}</option>;
                 })}
             </select>
             </div>
@@ -143,8 +146,8 @@ export const SpecialDropdown = () => {
         <button
             className="btn btn-secondary"
             onClick={(event) => {
-            history.push(`/specials`)
-            handleSaveSpecial();
+                event.preventDefault()
+                handleSaveSpecial();
             }}
         >
             {specialId ? <> Save Specials</> : <> Save Specials</>}

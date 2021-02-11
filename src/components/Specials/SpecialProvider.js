@@ -14,7 +14,7 @@ export const SpecialProvider = (props) => {
     }
 
     const addSpecial = specialObj => {
-        return fetch(`http://localhost:8088/specials/${specials.id}`, {
+        return fetch(`http://localhost:8088/specials/${specialObj.id}`, {
             method: "PUT", 
             headers: {
                 "Content-Type": "application/json"
@@ -32,7 +32,7 @@ export const SpecialProvider = (props) => {
 
 return (
     <SpecialContext.Provider value={{
-        specials, getSpecials, addSpecial, setSelectedSpecials, selectedSpecials
+        specials, getSpecials, addSpecial, setSelectedSpecials, selectedSpecials, setSpecials
     }}>
         {props.children}
     </SpecialContext.Provider>
