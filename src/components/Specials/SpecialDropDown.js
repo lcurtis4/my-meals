@@ -78,6 +78,7 @@ export const SpecialDropdown = () => {
         breakfastId: specials.breakfastId,
         lunchId: specials.lunchId,
         dinnerId: specials.dinnerId,
+        id: 1
         }).then(() => history.push("/specials"));
     };
 
