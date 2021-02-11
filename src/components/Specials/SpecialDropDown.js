@@ -14,7 +14,7 @@ export const SpecialDropdown = () => {
     const history = useHistory();
     const { specialId } = useParams();
 
-    const [specials, setSpecials] = useState({
+    const [specials] = useState({
         breakfastId: "",
         lunchId: "",
         dinnerId: "",
@@ -79,7 +79,7 @@ export const SpecialDropdown = () => {
         lunchId: specials.lunchId,
         dinnerId: specials.dinnerId,
         id: 1
-        }).then(() => history.push("/specials"));
+        }).then(() => history.push(`/specials/edit/${specials.id}`));
     };
 
     return (
@@ -143,7 +143,7 @@ export const SpecialDropdown = () => {
         <button
             className="btn btn-secondary"
             onClick={(event) => {
-            event.preventDefault();
+            history.push(`/specials`)
             handleSaveSpecial();
             }}
         >
