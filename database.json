@@ -13,14 +13,6 @@
   ],
   "meals": [
     {
-      "name": "Classic",
-      "mealTypeId": 1,
-      "mainDish": "Pancakes",
-      "sideDish": "Bacon",
-      "bev": "Orange Juice ",
-      "id": 1
-    },
-    {
       "name": "Sandwich",
       "mealTypeId": 2,
       "mainDish": "Turkey Sandwich",
@@ -45,12 +37,52 @@
       "id": 5
     },
     {
-      "name": "Cereal",
+      "name": "Taco's",
+      "mealTypeId": 3,
+      "mainDish": "Chicken Taco's ",
+      "sideDish": "Lettuce, Tomatos, Rice",
+      "bev": "Margs",
+      "id": 7
+    },
+    {
+      "name": "Tilapia ",
+      "mealTypeId": 3,
+      "mainDish": "Lemon Pepper Tilapia ",
+      "sideDish": "Yellow Rice & Deviled eggs",
+      "bev": "Milk",
+      "id": 8
+    },
+    {
+      "name": "Chicken Sandwich",
+      "mealTypeId": 2,
+      "mainDish": "Chicken Sandwich",
+      "sideDish": "Cheez-Itz, Fruit Snacks, Granola Bar",
+      "bev": "Water",
+      "id": 9
+    },
+    {
+      "name": "Chinese",
+      "mealTypeId": 3,
+      "mainDish": "Orange Chicken ",
+      "sideDish": " Rice, Steamed Veggies ",
+      "bev": "Coke",
+      "id": 10
+    },
+    {
+      "name": "Classic",
       "mealTypeId": 1,
-      "mainDish": "Captain Crunch",
-      "sideDish": "none",
-      "bev": "Milk ",
-      "id": 6
+      "mainDish": "Pancakes",
+      "sideDish": "Bacon",
+      "bev": "Orange Juice ",
+      "id": 11
+    },
+    {
+      "name": "Omlete ",
+      "mealTypeId": 1,
+      "mainDish": "Omlete",
+      "sideDish": "Peppers, Spinach, Avocado",
+      "bev": "Water",
+      "id": 12
     }
   ],
   "mealTypes": [
@@ -65,6 +97,14 @@
     {
       "id": 3,
       "name": "Dinner"
+    }
+  ],
+  "specials": [
+    {
+      "breakfastId": "",
+      "lunchId": "",
+      "dinnerId": "",
+      "id": 1
     }
   ]
 }
