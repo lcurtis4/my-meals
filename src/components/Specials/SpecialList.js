@@ -23,20 +23,21 @@ export const SpecialList = () => {
     // This return is just calling the MealCard to the dom
     return (    
     <>
-    {console.log(breakfast)}
         <div className="specialList">
             <div className="specials">
             <h2>Today's Specials</h2>
+            <h3> Breakfast:</h3> 
             {selectedSpecials.breakfastId ? 
-                    <MealCard  meal={breakfast} />
-             : null }
+                   <MealCard  meal={breakfast} />
+                   : null }
+                   <h3> Lunch:</h3> 
             {selectedSpecials.lunchId ? 
                     <MealCard  meal={lunch} />
-             : null }
+                    : null }
+                    <h3> Dinner:</h3> 
             {selectedSpecials.dinnerId ? 
                     <MealCard  meal={dinner} />
              : null }
-                    {console.log(selectedSpecials)}
             </div>
         </div>
         </>

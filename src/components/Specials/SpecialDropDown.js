@@ -25,7 +25,6 @@ export const SpecialDropdown = () => {
     }, []);
 
     useEffect(() => {
-        console.log(specials);
     }, [specials]);
 
     useEffect(() => {
@@ -54,7 +53,6 @@ export const SpecialDropdown = () => {
         newMeal.breakfastId = parseInt(event.target.value);
 
         setSelectedSpecials(newMeal);
-        console.log("test" )
     };
     const handleLunchInputChange = (event) => {
         // Making a copy of the meal obj and saving that copy under newMeal
@@ -63,7 +61,6 @@ export const SpecialDropdown = () => {
         newMeal.lunchId = parseInt(event.target.value);
 
         setSelectedSpecials(newMeal);
-        console.log("test" )
     };
     const handleDinnerInputChange = (event) => {
         // Making a copy of the meal obj and saving that copy under newMeal
@@ -72,7 +69,6 @@ export const SpecialDropdown = () => {
         newMeal.dinnerId = parseInt(event.target.value);
 
         setSelectedSpecials(newMeal);
-        console.log("test" )
     };
 
 
