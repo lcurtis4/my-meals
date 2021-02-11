@@ -1,4 +1,6 @@
 import React, {useState, createContext} from "react"
+import { MealContext } from "../Meal/MealProvider";
+
 
 export const SpecialContext = createContext()
 
@@ -12,13 +14,14 @@ export const SpecialProvider = (props) => {
     }
 
     const addSpecial = specialObj => {
-        return fetch("http://localhost:8088/specials", {
-            method: "POST", 
+        return fetch(`http://localhost:8088/specials/${specialObj.id}`, {
+            method: "PUT", 
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(specialObj)
         })
+        .then(getSpecials)
     }
 
     const [selectedSpecials, setSelectedSpecials] = useState({
@@ -29,7 +32,7 @@ export const SpecialProvider = (props) => {
 
 return (
     <SpecialContext.Provider value={{
-        specials, getSpecials, addSpecial, setSelectedSpecials, selectedSpecials
+        specials, getSpecials, addSpecial, setSelectedSpecials, selectedSpecials, setSpecials
     }}>
         {props.children}
     </SpecialContext.Provider>

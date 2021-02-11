@@ -77,9 +77,9 @@
       "id": 11
     },
     {
-      "name": "Omlete ",
+      "name": "Omelette ",
       "mealTypeId": 1,
-      "mainDish": "Omlete",
+      "mainDish": "Omelette",
       "sideDish": "Peppers, Spinach, Avocado",
       "bev": "Water",
       "id": 12
@@ -101,9 +101,9 @@
   ],
   "specials": [
     {
-      "breakfastId": "",
-      "lunchId": "",
-      "dinnerId": "",
+      "breakfastId": 12,
+      "lunchId": 3,
+      "dinnerId": 5,
       "id": 1
     }
   ]

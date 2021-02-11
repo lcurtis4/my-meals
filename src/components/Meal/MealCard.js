@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { MealContext } from "./MealProvider";
 
 //HTML Representation of a meal. This is being called on "/meals"
-export const MealCard = ({ meal }) => {
+export const MealCard = ({ meal, showButton }) => {
     const history = useHistory();
     const { dltMeal } = useContext(MealContext);
 
@@ -19,7 +19,8 @@ export const MealCard = ({ meal }) => {
         <div className="mainDish">Main Dish: {meal.mainDish}</div>
         <div className="mainDish">Side Dish: {meal.sideDish}</div>
         <div className="mainDish">Beverage: {meal.bev}</div>
-        <button onClick={handleDlt}> Delete Meal </button>
-        </section>
+        {showButton ?
+<button onClick={handleDlt}> Delete Meal </button>
+    : null}        </section>
     );
 };

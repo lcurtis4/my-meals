@@ -6,7 +6,7 @@ import "../Specials/Specials.css";
 
 // MealList is responsible for displaying the saved meals on the dom.
 export const SpecialList = () => {
-    const { specials, getSpecials, selectedSpecials } = useContext(SpecialContext);
+    const { getSpecials, selectedSpecials } = useContext(SpecialContext);
     const { meals, getMeals } = useContext(MealContext);
 
     /*By using useEffect, I have told React that my component needs to do something after render. 

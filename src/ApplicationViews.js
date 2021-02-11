@@ -11,16 +11,18 @@ export const ApplicationViews = () => {
         <>
         <MealProvider>
             <Route exact path="/meals">
-            <article className="mealCss">
-                <MealList />
-                <MealForm />
-            </article>
+                <article className="mealCss">
+                    <MealList />
+                    <MealForm />
+                </article>
             </Route>
         <SpecialProvider>
-            <Route exact path="/specials">
-            <SpecialDropdown />
-            <SpecialList />
+           <Route path="/specials">
+                <SpecialDropdown />
+                <SpecialList />
+            <Route  path="/specials/specials/edit:specialId(\d+)">
             </Route>
+           </Route>
         </SpecialProvider>    
         </MealProvider>
         </>
