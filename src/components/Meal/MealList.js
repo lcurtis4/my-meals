@@ -16,7 +16,7 @@ export const MealList = () => {
         <div className="meals">
           <h2>Meals</h2>
           {meals.map((meal) => {
-            return <MealCard key={meal.id} meal={meal} />;
+            return <MealCard key={meal.id} meal={meal} showButton={true}/>;
           })}
         </div>
       </div>
